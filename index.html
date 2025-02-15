@@ -9,8 +9,8 @@
             max-width: 100%;
             margin: 20px auto;
             padding: 20px;
-            background-color: #f6f8fa; /* GitHub 背景颜色 */
-            color: #24292e; /* GitHub 文本颜色 */
+            background-color: #f6f8fa; 
+            color: #24292e; 
         }
     
         .container {
@@ -36,16 +36,28 @@
         textarea {
             width: 100%;
             margin: 10px 0;
-            padding: 12px;
-            border: 1px solid #d1d5da; /* GitHub 输入框边框颜色 */
-            border-radius: 4px;
+            padding: 10px;
+            padding: 10px;
+            border: 1px solid #d1d5da; 
+            border-radius: 6px;
             resize: vertical;
             font-size: 14px;
+            line-height: 1.5;
             box-sizing: border-box;
             background-color: #ffffff; /* 输入框背景颜色 */
             color: #24292e; /* 输入框文本颜色 */
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
-    
+
+        textarea:hover {
+            border-color: #b1b4b9; /* 悬停时边框颜色加深 */
+        }
+
+        textarea:focus {
+            border-color: #52a7ff; /* 聚焦时边框颜色为蓝色 */
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(82, 167, 255, 0.3); /* 聚焦时的阴影效果 */
+        }
         /* 需求标题输入框高度调小 */
         #stringA {
             height: 40px;
@@ -71,14 +83,16 @@
         pre {
             white-space: pre-wrap;
             word-wrap: break-word;
-            background: #f0f4f8; /* GitHub 代码块背景颜色 */
+            background: #f0f4f8; 
             padding: 20px;
             border-radius: 4px;
-            border: 1px solid #d1d5da; /* GitHub 代码块边框颜色 */
+            border: 1px solid #d1d5da; 
             font-family: 'SFMono-Regular', Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 14px;
+            line-height: 1.5;
             min-height: 300px; /* 设置最小高度 */
             overflow-y: visible; /* 移除滚动条 */
-            color: #24292e; /* 代码块文本颜色 */
+            color: #24292e; 
         }
     
         button {
